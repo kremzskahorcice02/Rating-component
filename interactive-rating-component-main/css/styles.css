@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216deg, 12%, 8%);
+}
+
+.form {
+  background: rgb(23, 30, 40);
+  background: linear-gradient(0deg, rgb(23, 30, 40) 30%, rgba(35, 42, 50, 0.9448821765) 100%);
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+.form__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: hsl(213deg, 19%, 18%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form__title {
+  color: hsl(0deg, 0%, 100%);
+  margin-top: 20px;
+}
+.form__description {
+  color: hsl(217deg, 12%, 63%);
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+.form__items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.form__items > * {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: hsl(213deg, 19%, 18%);
+  border: none;
+  color: hsl(217deg, 12%, 63%);
+  font-weight: 700;
+}
+.form__items > *:hover {
+  background-color: hsl(217deg, 12%, 63%);
+  color: hsl(0deg, 0%, 100%);
+}
+.form__items > *.active {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+}
+.form__button {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  width: 100%;
+  height: 35px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+}
+.form__button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+
+.rating-hidden {
+  display: none;
+}
+
+.rating-done {
+  display: block;
+  background: rgb(23, 30, 40);
+  background: linear-gradient(0deg, rgb(23, 30, 40) 30%, rgba(35, 42, 50, 0.9448821765) 100%);
+  width: 80%;
+  padding: 25px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.rating-done > * {
+  align-self: center;
+}
+.rating-done__img {
+  width: 50%;
+  margin-top: 15px;
+}
+.rating-done__response {
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(213deg, 19%, 18%);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+.rating-done__title {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.rating-done__text {
+  color: hsl(217deg, 12%, 63%);
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+.attribution {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0 0 10px 10px;
+  font-size: 12px;
+  text-align: center;
+  color: rgb(183, 172, 172);
+}
+.attribution a {
+  color: hsl(228deg, 13%, 55%);
+}
+
+@media only screen and (min-width: 376px) {
+  .form,
+.rating-done {
+    width: 20%;
+  }
+}/*# sourceMappingURL=styles.css.map */

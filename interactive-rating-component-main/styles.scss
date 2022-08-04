@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+@mixin round-border {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $background-primary;
+}
+
+$text-primary: hsl(0, 0%, 100%);
+$text-secondary: hsl(217, 12%, 63%);
+$text-terc: hsl(216, 12%, 54%);
+$background-primary: hsl(213, 19%, 18%);
+$background-secondary: hsl(216, 12%, 8%);
+$button-action: hsl(25, 97%, 53%);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    background-color: $background-secondary;
+}
+
+.form {
+    background: rgb(23,30,40);
+    background: linear-gradient(0deg, rgba(23,30,40,1) 30%, rgba(35,42,50,0.9448821765034139) 100%);
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+    &__icon {
+        @include round-border();
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        color: $text-primary;
+        margin-top: 20px;
+    }
+
+    &__description {
+        color: $text-secondary;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-top: 10px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        & > * {
+            @include round-border();
+            border: none;
+            color: $text-secondary;
+            font-weight: 700;
+
+            &:hover {
+                background-color: $text-secondary;
+                color: $text-primary;
+            }
+
+            &.active {
+                background-color: $button-action;
+                color: $text-primary;
+            }
+        }
+    }
+
+
+    &__button {
+        background-color: $button-action;
+        color: $text-primary;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        width: 100%;
+        height: 35px;
+        border-radius: 30px;
+        border: none;
+        margin-top: 20px;
+
+        &:hover {
+            background-color: $text-primary;
+            color: $button-action;
+        }
+        
+    }
+}
+
+.rating-hidden {
+    display: none;
+}
+
+.rating-done {
+    display: block;
+    background: rgb(23,30,40);
+    background: linear-gradient(0deg, rgba(23,30,40,1) 30%, rgba(35,42,50,0.9448821765034139) 100%);
+    width: 80%;
+    padding: 25px;
+    margin: 0 auto;
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    & > * {
+        align-self: center;
+    }
+    &__img {
+        width: 50%;
+        margin-top: 15px;
+    }
+
+    &__response {
+        color: $button-action;
+        background-color: $background-primary;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        font-weight: 400;
+        padding: 5px 10px;
+        border-radius: 15px;
+        margin-top: 30px;
+    }
+
+    &__title {
+        color: $text-primary;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-top: 30px;
+    }
+
+    &__text {
+        color: $text-secondary;
+        font-size: 0.7rem;
+        text-align: center;
+        line-height: 1.5;
+        margin-top: 15px;
+    }
+}
+    
+
+.attribution {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 0 10px 10px;
+    font-size: 12px; 
+    text-align: center;
+    color: rgb(183, 172, 172);
+
+    & a {
+        color: hsl(228, 13%, 55%);
+    }
+}
+
+@media only screen and (min-width: 376px) {
+    .form,
+    .rating-done {
+        width: 20%;
+    }
+}
